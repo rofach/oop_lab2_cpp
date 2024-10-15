@@ -46,17 +46,17 @@ int main()
     std::cout << copyMat;
 
 
-    std::cout << matrix1.getTransportedCopy();
+    //std::cout << matrix1.getTransportedCopy();
 
     std::cout << "transpone\n";
-    matrix1.TransponeMe();
+    //matrix1.TransponeMe();
     std::cout << matrix1;
 
-    /*std::cout << "add\n";
-    std::cout << matrix1 + matrix2 << std::endl;
+    std::cout << "add\n";
+   // std::cout << matrix1 + matrix2 << std::endl;
     std::cout << "mul\n";
     std::cout << matrix1 * matrix2 << std::endl;
     
     //double det = *matrix1.calcDeterminant();
-    std::cout << matrix1.calcDeterminant() << std::endl;*/
+    //std::cout << matrix1.calcDeterminant() << std::endl;
 }

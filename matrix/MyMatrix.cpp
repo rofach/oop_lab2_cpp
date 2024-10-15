@@ -169,7 +169,7 @@ MyMatrix operator+(MyMatrix& matrix1, MyMatrix& matrix2) {
 }
 
 MyMatrix operator*(MyMatrix& matrix1, MyMatrix& matrix2) {
-    if (matrix1.getWidth() != matrix2.getHeight()) throw "impossible";
+    if (matrix1.getHeight() != matrix2.getWidth()) throw "impossible";
 
     int rows = matrix1.getHeight();
     int cols = matrix2.getWidth();
