@@ -40,7 +40,7 @@ MyMatrix::MyMatrix(MyMatrix& matrix) : m_rows(matrix.m_rows), m_cols(matrix.m_co
             m_matrix[i][j] = matrix.m_matrix[i][j];
         }
     }
-    //std::copy(&matrix.m_matrix[0][0], &matrix.m_matrix[0][0] + h * w, &m_matrix[0][0]); // ÏĞÎÒÅÑÒÓÂÀÒÈ! // íå ïğàöşº :((((
+    
 }
 MyMatrix::MyMatrix(double** matrix, int rows, int cols) : m_rows(rows), m_cols(cols)
 {
@@ -122,6 +122,15 @@ MyMatrix::MyMatrix(std::string str)
 }
 
 
+void MyMatrix::setValue(int i, int j, double num) {
+    m_matrix[i][j] = num;
+}
+
+double MyMatrix::getValue(int i, int j) {
+    return m_matrix[i][j];
+}
+
+
 std::ostream& operator <<(std::ostream& out, const MyMatrix& matrix) {
     for (int i = 0; i < matrix.m_rows; i++) {
         for (int j = 0; j < matrix.m_cols; j++)
@@ -169,7 +178,7 @@ MyMatrix operator+(MyMatrix& matrix1, MyMatrix& matrix2) {
 }
 
 MyMatrix operator*(MyMatrix& matrix1, MyMatrix& matrix2) {
-    if (matrix1.getHeight() != matrix2.getWidth()) throw "impossible";
+    if (matrix1.getWidth() != matrix2.getHeight()) throw "impossible";
 
     int rows = matrix1.getHeight();
     int cols = matrix2.getWidth();
@@ -207,7 +216,7 @@ MyMatrix MyMatrix::getTransportedCopy() {
     return MyMatrix(getTrasnportedArray(), m_cols, m_rows);
 }
 
-void MyMatrix::TransponeMe() {
+void MyMatrix::transposeMe() {
     MyMatrix temp = getTransportedCopy();
     
 

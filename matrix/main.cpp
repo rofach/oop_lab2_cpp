@@ -50,10 +50,10 @@ int main()
 
     std::cout << "transpone\n";
     //matrix1.TransponeMe();
-    std::cout << matrix1;
+    //std::cout << matrix1;
 
     std::cout << "add\n";
-   // std::cout << matrix1 + matrix2 << std::endl;
+    // std::cout << matrix1 + matrix2 << std::endl;
     std::cout << "mul\n";
     std::cout << matrix1 * matrix2 << std::endl;
     

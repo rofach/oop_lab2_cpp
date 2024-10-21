@@ -49,13 +49,15 @@ public:
     
     int getWidth();
 
-    void setValue() {
+    void setValue(int i, int j, double num);
 
-    }
+    double getValue(int i, int j);
+
+    
 
     MyMatrix getTransportedCopy();
-    
-    void TransponeMe();
+
+    void transposeMe();
 
     friend std::ostream& operator<<(std::ostream& out, const MyMatrix& matrix);
    
